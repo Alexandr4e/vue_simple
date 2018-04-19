@@ -1,4 +1,3 @@
-npm install
 <template>
   <div id="app">
     <img src="./assets/logo.png">
@@ -6,18 +5,23 @@ npm install
     <div>
       <componentName></componentName>
     </div>
+    <div>
+      <block></block>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
-import componentName from './components/newComponent'
+import HelloWorld from './components/HelloWorld.vue'
+import componentName from './components/newComponent.vue'
+import block from './components/block/block.vue'
 
 export default {
   name: 'App',
   components: {
     HelloWorld,
-    componentName
+    componentName,
+    block
   }
 }
 </script>
