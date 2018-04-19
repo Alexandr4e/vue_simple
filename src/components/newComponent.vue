@@ -3,6 +3,11 @@
     <h1>THIS IS NEW COMPONENT</h1>
     <div>{{ msg }}</div>
     <div>{{ newText }}</div>
+    <ol>
+      <li v-for="todo in todos">
+        {{ todo.text }}
+      </li>
+    </ol>
   </div>
 </template>
 
@@ -13,6 +18,11 @@
       return {
         msg: 'FUCK OFF ASSHOLE',
         newText: 'PUTIN',
+        todos: [
+            { text: 'Изучить JavaScript' },
+            { text: 'Изучить Vue' },
+            { text: 'Создать что-нибудь классное' }
+        ]
       }
     }
   }
