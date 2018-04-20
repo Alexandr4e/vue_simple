@@ -7,18 +7,17 @@
       </p>
       <p class="header__price">990 руб./месяц</p>
     </div>
+    <formBlock></formBlock>
   </div>
 </template>
 
 <script>
-import block from './components/block/block.vue'
-import form from './components/form/form.vue'
+import formBlock from './components/form/form.vue'
 
 export default {
   name: 'App',
   components: {
-    form,
-    block
+	formBlock
   }
 }
 </script>
@@ -27,18 +26,21 @@ export default {
 p, h1 {
   margin: 0;
 }
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #002130;
-  margin: 95px auto 31px;
-  border-bottom: 1px solid #e6e6e6;
+  margin: 95px auto 86px;
   max-width: 740px;
   padding: 0 20px;
 }
-
+.header {
+  border-bottom: 1px solid #e6e6e6;
+  margin-bottom: 31px;
+}
 .header__title {
   color: #002e3f;
   /*font-family: "PF Din Text Pro";*/
@@ -59,5 +61,24 @@ p, h1 {
   font-size: 34px;
   font-weight: 300;
   margin-bottom: 29px;
+}
+
+@media screen and (max-width: 620px) {
+  #app {
+    margin: 74px auto 71px;
+    padding: 0 14px;
+  }
+  .header__title {
+    font-size: 24px;
+    margin-bottom: 7px;
+  }
+  .header__text {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+  .header__price{
+    font-size: 24px;
+    margin-bottom: 31px;
+  }
 }
 </style>
