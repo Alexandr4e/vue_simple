@@ -1,0 +1,1 @@
+<style lang="less" src="./fonts.less"></style>

@@ -1,6 +1,7 @@
 <template>
 	<div class="form">
 		<form>
+			<!--FORM-->
 			<div class="form__wrap">
 				<!--LEFT-PART-->
 				<div class="form__part">
@@ -31,26 +32,27 @@
 						<div class="form__radio">
 							<div class="form__radio-wrap">
 								<input id="input_1" type="radio" name="time" class="form__radio-item">
-								<label for="input_1">3 месяца</label>
+								<label class="form__radio-text" for="input_1">3 месяца</label>
 							</div>
 							<div class="form__radio-wrap">
 								<input id="input_2" type="radio" name="time" class="form__radio-item">
-								<label for="input_2">6 месяцев</label>
+								<label class="form__radio-text" for="input_2">6 месяцев</label>
 							</div>
 							<div class="form__radio-wrap">
 								<input id="input_3" type="radio" name="time" class="form__radio-item">
-								<label for="input_3">1 год</label>
+								<label class="form__radio-text" for="input_3">1 год</label>
 							</div>
 						</div>
 					</div>
 					<div class="form__block">
 						<label for="texarea" class="form__title">Е-mail *</label>
-						<textarea id="texarea" class="form__textarea" rows="9"></textarea>
+						<textarea id="texarea" class="form__textarea" rows="7"></textarea>
 					</div>
 				</div>
 				<!--/RIGHT-PART-->
 			</div>
-
+			<!--/FORM-->
+			<!--ALERT-MESSAGE-->
 			<div class="form__alert">
 				<div class="form__close">
 					<span class="form__close-line"></span>
@@ -60,8 +62,10 @@
 					Внимание! Необходимо заполнить все обязательные поля!
 				</p>
 			</div>
-
+			<!--/ALERT-MESSAGE-->
+			<!--BUTTON-->
 			<button class="form__btn">Купить</button>
+			<!--/BUTTON-->
 		</form>
 	</div>
 </template>
