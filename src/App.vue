@@ -58,7 +58,7 @@ table {border-collapse: collapse; border-spacing: 0;}
 }
 
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  /*font-family: 'Avenir', Helvetica, Arial, sans-serif;*/
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -73,7 +73,7 @@ table {border-collapse: collapse; border-spacing: 0;}
 }
 .header__title {
   color: #002e3f;
-  font-family: 'pf_dintext_promedium', Arial, Tahoma, Verdana, sans-serif;
+  /*font-family: 'pf_dintext_promedium', Arial, Tahoma, Verdana, sans-serif;*/
   font-size: 34px;
   font-weight: 500;
   margin-bottom: 11px;

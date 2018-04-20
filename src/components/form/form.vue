@@ -1,5 +1,5 @@
 <template>
-	<div class="form">
+	<div class="form" id="form">
 		<form>
 			<!--FORM-->
 			<div class="form__wrap">
@@ -8,19 +8,19 @@
 					<div class="form__block">
 						<label for="name" class="form__title">Представьтесь *</label>
 						<div  class="form__input-wrap">
-							<input id="name" type="text" class="form__input">
+							<input id="name" v-model="fio" type="text" class="form__input" >
 						</div>
 					</div>
 					<div class="form__block">
 						<label for="tel" class="form__title">Телефон *</label>
 						<div class="form__input-wrap">
-							<input id="tel" type="text" class="form__input" placeholder="+7(ХХХ) ХХХ-ХХ-ХХ">
+							<input v-model="phone" id="tel" type="text" class="form__input" placeholder="+7(ХХХ) ХХХ-ХХ-ХХ">
 						</div>
 					</div>
 					<div class="form__block">
 						<label for="mail" class="form__title">Е-mail *</label>
 						<div class="form__input-wrap">
-							<input id="mail" type="text" class="form__input">
+							<input v-model="mail" id="mail" type="text" class="form__input">
 						</div>
 					</div>
 				</div>
@@ -31,40 +31,41 @@
 						<p class="form__title">Период *</p>
 						<div class="form__radio">
 							<div class="form__radio-wrap">
-								<input id="input_1" type="radio" name="time" class="form__radio-item">
+								<input id="input_1" v-model="radio" value="1" type="radio" name="time" class="form__radio-item">
 								<label class="form__radio-text" for="input_1">3 месяца</label>
 							</div>
 							<div class="form__radio-wrap">
-								<input id="input_2" type="radio" name="time" class="form__radio-item">
+								<input id="input_2" v-model="radio" value="2" type="radio" name="time" class="form__radio-item">
 								<label class="form__radio-text" for="input_2">6 месяцев</label>
 							</div>
 							<div class="form__radio-wrap">
-								<input id="input_3" type="radio" name="time" class="form__radio-item">
+								<input id="input_3" v-model="radio" value="3" type="radio" name="time" class="form__radio-item">
 								<label class="form__radio-text" for="input_3">1 год</label>
 							</div>
 						</div>
 					</div>
 					<div class="form__block">
 						<label for="texarea" class="form__title">Е-mail *</label>
-						<textarea id="texarea" class="form__textarea" rows="7"></textarea>
+						<textarea v-model="area" id="texarea" class="form__textarea" rows="7"></textarea>
 					</div>
 				</div>
 				<!--/RIGHT-PART-->
 			</div>
 			<!--/FORM-->
 			<!--ALERT-MESSAGE-->
-			<div class="form__alert">
+			<div class="form__alert" v-if="messageFunction">
 				<div class="form__close">
 					<span class="form__close-line"></span>
 					<span class="form__close-line"></span>
 				</div>
 				<p class="form__alert-text">
-					Внимание! Необходимо заполнить все обязательные поля!
+					{{message}}
+					<!--Внимание! Необходимо заполнить все обязательные поля!-->
 				</p>
 			</div>
 			<!--/ALERT-MESSAGE-->
 			<!--BUTTON-->
-			<button class="form__btn">Купить</button>
+			<input type="button" value="Купить" class="form__btn" v-on:click="messageFunc">
 			<!--/BUTTON-->
 		</form>
 	</div>
