@@ -59,9 +59,6 @@ table {border-collapse: collapse; border-spacing: 0;}
 @import "mixins.less";
 
 #app {
-  /*font-family: 'Avenir', Helvetica, Arial, sans-serif;*/
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #002130;
   margin: 95px auto 86px;
