@@ -8,19 +8,19 @@
 					<div class="form__block">
 						<label for="name" class="form__title">Представьтесь *</label>
 						<div  class="form__input-wrap">
-							<input id="name" v-model="fio" type="text" class="form__input" >
+							<input name="fio" id="name" v-model="fio" type="text" class="form__input" >
 						</div>
 					</div>
 					<div class="form__block">
 						<label for="tel" class="form__title">Телефон *</label>
 						<div class="form__input-wrap">
-							<input v-model="phone" id="tel" type="text" class="form__input" placeholder="+7(ХХХ) ХХХ-ХХ-ХХ">
+							<input name="phone" v-model="phone" id="tel" type="text" class="form__input" placeholder="+7(ХХХ) ХХХ-ХХ-ХХ">
 						</div>
 					</div>
 					<div class="form__block">
 						<label for="mail" class="form__title">Е-mail *</label>
 						<div class="form__input-wrap">
-							<input v-model="mail" id="mail" type="text" class="form__input">
+							<input name="email" v-model="mail" id="mail" type="text" class="form__input">
 						</div>
 					</div>
 				</div>
@@ -31,30 +31,47 @@
 						<p class="form__title">Период *</p>
 						<div class="form__radio">
 							<div class="form__radio-wrap">
-								<input id="input_1" v-model="radio" value="1" type="radio" name="time" class="form__radio-item">
-								<label class="form__radio-text" for="input_1">3 месяца</label>
+								<input name="period" type="hidden" :value="period">
+								<button
+										type="button"
+										v-on:click="period = 3"
+										v-bind:class="[ period === 3 ? 'form__radio-btn_active' : '', 'form__radio-btn']"
+								>
+
+								</button>
+								<span class="form__radio-text" v-on:click="period = 3">3 месяца</span>
 							</div>
 							<div class="form__radio-wrap">
-								<input id="input_2" v-model="radio" value="2" type="radio" name="time" class="form__radio-item">
-								<label class="form__radio-text" for="input_2">6 месяцев</label>
+								<button
+										type="button"
+										v-on:click="period = 6"
+										v-bind:class="[ period === 6 ? 'form__radio-btn_active' : '', 'form__radio-btn']"
+								>
+								</button>
+								<span class="form__radio-text" v-on:click="period = 6">6 месяцев</span>
 							</div>
 							<div class="form__radio-wrap">
-								<input id="input_3" v-model="radio" value="3" type="radio" name="time" class="form__radio-item">
-								<label class="form__radio-text" for="input_3">1 год</label>
+								<button
+										type="button"
+										v-on:click="period = 12"
+										v-bind:class="[ period === 12 ? 'form__radio-btn_active' : '', 'form__radio-btn']"
+								>
+								</button>
+								<span class="form__radio-text" v-on:click="period = 12">1 год</span>
 							</div>
 						</div>
 					</div>
 					<div class="form__block">
-						<label for="texarea" class="form__title">Е-mail *</label>
-						<textarea v-model="area" id="texarea" class="form__textarea" rows="7"></textarea>
+						<label for="texarea" class="form__title">Реквизиты *</label>
+						<textarea name="area" v-model="area" id="texarea" class="form__textarea" rows="7"></textarea>
 					</div>
 				</div>
 				<!--/RIGHT-PART-->
 			</div>
 			<!--/FORM-->
 			<!--ALERT-MESSAGE-->
-			<div class="form__alert" v-if="messageFunction">
-				<div class="form__close">
+			<div class="form__alert" v-if="isError">
+				<div class="form__close" v-on:click="isError = false">
 					<span class="form__close-line"></span>
 					<span class="form__close-line"></span>
 				</div>
@@ -65,7 +82,7 @@
 			</div>
 			<!--/ALERT-MESSAGE-->
 			<!--BUTTON-->
-			<input type="button" value="Купить" class="form__btn" v-on:click="messageFunc">
+			<input type="submit" value="Купить" class="form__btn" v-on:click="messageFunc">
 			<!--/BUTTON-->
 		</form>
 	</div>

@@ -13,18 +13,16 @@
 
 <script>
 import formBlock from './components/form/form.vue'
-import fonts from './components/fonts/fonts.vue'
 
 export default {
   name: 'App',
   components: {
 	formBlock,
-    fonts
   }
 }
 </script>
 
-<style>
+<style lang="less">
 /* RESET CSS*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -57,6 +55,9 @@ table {border-collapse: collapse; border-spacing: 0;}
   box-sizing: border-box;
 }
 
+@import "fonts.less";
+@import "mixins.less";
+
 #app {
   /*font-family: 'Avenir', Helvetica, Arial, sans-serif;*/
   -webkit-font-smoothing: antialiased;
@@ -73,24 +74,22 @@ table {border-collapse: collapse; border-spacing: 0;}
 }
 .header__title {
   color: #002e3f;
-  /*font-family: 'pf_dintext_promedium', Arial, Tahoma, Verdana, sans-serif;*/
+  .medium();
   font-size: 34px;
-  font-weight: 500;
   margin-bottom: 11px;
 }
 .header__text {
   color: #002130;
-  /*font-family: "PF Din Text Pro";*/
-  font-size: 21px;
-  font-weight: 300;
+  font-size: 20px;
   margin-bottom: 8px;
+  .light();
+
 }
 .header__price{
   color: #002130;
-  /*font-family: "PF Din Text Pro";*/
   font-size: 34px;
-  font-weight: 300;
   margin-bottom: 29px;
+  .light();
 }
 
 @media screen and (max-width: 620px) {

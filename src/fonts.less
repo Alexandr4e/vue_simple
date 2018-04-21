@@ -1,4 +1,4 @@
-@fonts: "/assets/fonts/";
+@fonts: "/static/fonts/";
 
 @font-face {
 	font-family: 'pf_dintext_prolight';
@@ -10,12 +10,6 @@
 	url('@{fonts}PFDinTextPro-Light/pfdintextpro-light-webfont.svg#pf_dintext_prolight') format('svg');
 	font-weight: normal;
 	font-style: normal;
-
-}
-
-.light() {
-	font-family: 'pf_dintext_prolight', Arial, Tahoma, Verdana, sans-serif;
-	font-weight: 300;
 }
 
 @font-face {
@@ -31,6 +25,9 @@
 }
 
 .medium() {
-	font-family: 'pf_dintext_promedium', Arial, Tahoma, Verdana, sans-serif;
-	font-weight: 500;
+	font-family: 'pf_dintext_promedium', sans-serif;
+}
+
+.light() {
+	font-family: 'pf_dintext_prolight', sans-serif;
 }

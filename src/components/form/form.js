@@ -1,5 +1,5 @@
 export default {
-	name: 'form',
+	name: 'myForm',
 	data () {
 		return {
 			message: 'Внимание! Необходимо заполнить все обязательные поля!',
@@ -8,12 +8,24 @@ export default {
 			phone: '',
 			mail: '',
 			area: '',
-			radio: '',
+			period: '',
 		}
 	},
 	methods: {
-		messageFunc: function () {
-			data.return.isError = !(this.fio && this.phone && this.mail && this.area && this.radio)
-		}
-	},
+		messageFunc: function (e) {
+
+			console.log('!');
+
+			if (!this.fio || !this.phone || !this.mail || !this.period || !this.area) {
+				this.isError = true;
+				e.preventDefault();
+			} else {
+				this.isError = false;
+				return true;
+			}
+		},
+		closeFunc: function () {
+			this.isError = false;
+		},
+	}
 }
