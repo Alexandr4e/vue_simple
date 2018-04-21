@@ -2,8 +2,7 @@
 
 > A Vue.js project
 
->Ссылка для просмотра готового index.html  
-scary-tin.surge.sh
+>### Посмотреть готовый вариант можно [по этой ссылке](http://scary-tin.surge.sh/)
 
 
 ## Build Setup
