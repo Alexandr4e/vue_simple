@@ -2,6 +2,8 @@
 
 > A Vue.js project
 
+>ссылка для просмотра готового index.html
+
 ## Build Setup
 
 ``` bash
