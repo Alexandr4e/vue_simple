@@ -2,7 +2,7 @@
 
 > A Vue.js project
 
->### Посмотреть готовый вариант можно [по этой ссылке](http://scary-tin.surge.sh/)
+### Посмотреть готовый вариант можно [по этой ссылке](http://scary-tin.surge.sh/)
 
 
 ## Build Setup
